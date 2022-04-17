@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Author {
 
     /**
@@ -9,6 +11,14 @@ public class Author {
     //Create 6 args custom constructor here
     //YOUR CODE HERE
 
+    public Author(String firstName, String lastName, String country, boolean isAlive, int age, ArrayList<Book> books){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.country = country;
+        this.isAlive = isAlive;
+        this.age = age;
+        this.books = books;
+    }
 
     /*
         Define instance variables here
@@ -16,10 +26,28 @@ public class Author {
     */
     //YOUR CODE HERE
 
+    public String firstName;
+    public String lastName;
+    public String country;
+    public boolean isAlive;
+    public int age;
+    ArrayList<Book>books;
 
     /*
     Override toString() method here that returns Author object information
      */
     //YOUR CODE HERE
 
+
+    @Override
+    public String toString() {
+        return "Author{" +
+                "firstName = '" + firstName + '\'' +
+                ", lastName = '" + lastName + '\'' +
+                ", country = '" + country + '\'' +
+                ", isAlive = " + isAlive +
+                ", age = " + age +
+                ", books = " + books +
+                '}';
+    }
 }
